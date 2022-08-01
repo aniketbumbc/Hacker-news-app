@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { getStory } from '../../services/service';
+import { convertDateTime } from '../../utils';
 import './story.css';
 
 const Story = ({ storyId }) => {
@@ -17,7 +18,7 @@ const Story = ({ storyId }) => {
     <>
       <div className='container'>
         <div className='blog-container'>
-          <a href={story.url} target='_blank'>
+          <a target='_blank' href={story.url} rel='noreferrer noopener'>
             <p>{story.title}</p>
           </a>
           <p>
@@ -28,7 +29,7 @@ const Story = ({ storyId }) => {
             |{' '}
             <span>
               {' '}
-              <strong>Posted:</strong> <i>{story.time}</i>{' '}
+              <strong>Posted:</strong> <i>{convertDateTime(story.time)}</i>{' '}
             </span>
           </p>
         </div>
