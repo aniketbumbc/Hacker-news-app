@@ -1,3 +1,8 @@
+/**
+ *  Method take iso timestamp and convert into en-us locale date
+ * @param {*} timestamp
+ */
+
 export const convertDateTime = (timestamp) => {
   const actualDate = new Date(timestamp * 1000).toLocaleDateString('en-US');
   return actualDate;

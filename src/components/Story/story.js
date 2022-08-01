@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, memo } from 'react';
 import { getStory } from '../../services/service';
 import { convertDateTime } from '../../utils';
 import './story.css';
@@ -23,13 +23,16 @@ const Story = ({ storyId }) => {
           </a>
           <p>
             <span>
-              <strong>By: </strong>
-              <i>{story.by}</i>
+              <strong style={{ color: 'rgb(212, 141, 25)' }}>By: </strong>
+              <i style={{ color: 'coral' }}>{story.by}</i>
             </span>{' '}
             |{' '}
             <span>
               {' '}
-              <strong>Posted:</strong> <i>{convertDateTime(story.time)}</i>{' '}
+              <strong style={{ color: 'rgb(212, 141, 25)' }}>
+                Posted:
+              </strong>{' '}
+              <i style={{ color: 'coral' }}>{convertDateTime(story.time)}</i>{' '}
             </span>
           </p>
         </div>
@@ -38,4 +41,4 @@ const Story = ({ storyId }) => {
   ) : null;
 };
 
-export default Story;
+export default memo(Story);
