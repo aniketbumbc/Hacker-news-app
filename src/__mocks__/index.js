@@ -11,7 +11,7 @@ export const singleStory = {
     'https://www.cnn.com/2022/08/01/world/water-battery-switzerland-renewable-energy-climate-scn-hnk-spc-intl/index.html',
 };
 
-export const StoryId = [9865];
+export const storyId = ['9865'];
 
 export const undefinedStory = {
   by: undefined,
