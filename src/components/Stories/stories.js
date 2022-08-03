@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { getStoryIds } from '../../services/service';
-import Loader from '../../shared/loader/loader';
+import Loader from '../Loader/loader';
 import Story from '../Story/story';
 import { useInfiniteScroller } from '../../hooks/useInfiniteScroller';
 
