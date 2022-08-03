@@ -26,7 +26,7 @@ const Story = ({ storyId }) => {
               <strong style={{ color: 'rgb(212, 141, 25)' }}>By: </strong>
               <i style={{ color: 'coral' }}>{story.by}</i>
             </span>{' '}
-            |{' '}
+            <strong> | </strong>
             <span>
               {' '}
               <strong style={{ color: 'rgb(212, 141, 25)' }}>
